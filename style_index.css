@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+    font-family: "Poppins", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", system-ui;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", system-ui;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", system-ui;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", system-ui;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* Definindo variaveis de cor no :root */
+:root {
+    --pasta-color:rgba(7, 153, 146,1.0); 
+    --arquivo-color:rgba(255, 165, 2,1.0);
+    --editor-background-color:rgba(53, 59, 72,1.0);
+    --editor-foreground-color:rgba(220, 221, 225,1.0);
+    --marq-color:rgba(255, 63, 52,1.0);
+    --code-color:rgba(87, 95, 207,1.0);
+    --editor-color:rgba(11, 232, 129,1.0);
+    --menu-color:rgba(241, 242, 246,1.0);
+    --marq-diretorio-file:rgba(47, 53, 66,1.0);
+    --marq-previsualizar:rgba(235, 59, 90,1.0);
+    --marq-salvar-arquivo:rgba(45, 152, 218,1.0);
+    --marq-hot-reload: rgba(238, 90, 36,1.0);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+ul li {
+    /* list-style-type: initial; */
+    list-style-type: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--editor-background-color);
+    color: var(--editor-foreground-color);
+}
+
+.marq-menu-editor {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: var(--menu-color);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.marq-label-logo {
+    margin-left: 12px;
+}
+
+.marq-span-marq {
+    color: var(--marq-color);
+}
+
+.marq-span-code{
+    color: var(--code-color);
+}
+
+.marq-span-editor{
+    color: var(--editor-color);
+}
+
+.marq-area-editor {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.marq-diretorio-file {
+    width: 20%;
+    height: 90vh;
+    background-color: var(--marq-diretorio-file);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.marq-code-editor {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 90vh;
+    background-color: var(--editor-background-color);
+}
+
+.marq-acoes-diretorio {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 8px; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.marq-btn-novo-arquivo {
+    background-color: var(--arquivo-color);
+    color: var(--editor-foreground-color);
+    width: 100%;
+    height: 100%;
+    border:none;
+    cursor: pointer;
+}
+
+.marq-btn-nova-pasta {
+    background-color: var(--pasta-color);
+    color: var(--editor-foreground-color);
+    width: 100%;
+    height: 100%;
+    border:none;
+    cursor: pointer;
+}
+
+.marq-lista-diretorios{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.marq-lista-diretorios ul a {
+    color: var(--editor-foreground-color);
+    text-decoration: none;
+}
+
+.marq-hash{
+    color: var(--pasta-color);
+}
+
+.marq-hash-arquivo {
+    color: var(--arquivo-color);
+}
+
+.marq-pre-visualizar{
+    background-color: var(--marq-previsualizar);
+    color: var(--editor-foreground-color);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    padding: 12px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.marq-hot-reload {
+    background-color: var(--marq-hot-reload);
+    color: var(--editor-foreground-color);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 75px;
+    right: 20px;
+    padding: 12px 34px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.marq-salvar {
+    background-color: var(--marq-salvar-arquivo);
+    color: var(--editor-foreground-color);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 205px;
+    padding: 12px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.marq-editor-header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.code-editor:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: none; /* Remove qualquer sombra de foco */
+}
+
+.code-editor{
+    width: 100%;
+    height: 450px;
+    border: none;
+    background: var(--editor-background-color);
+    color: var(--editor-foreground-color);
+
+    padding: 15px;
+    resize: none;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre;
+    overflow: auto;
+}
+
+#webview {
+    width: 100%;
+    /* height: 90vh; */
+    border: none;
+    background: transparent;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.marq-btn-chat-ia {
+    border: none;
+    cursor: pointer;
+}
+
+.marq-btn-chat-ia i {
+    margin-right: 16px;
+    color: var(--code-color);
+    font-size: 24px;
+}
+
+.marq-btn-youtube {
+    border: none;
+    cursor: pointer;
+}
+
+.marq-btn-youtube i {
+    margin-right: 16px;
+    color: var(--marq-color);
+    font-size: 24px;
+ }
+
+.marq-btn-expanda {
+    border: none;
+    cursor: pointer;
+}
+
+.marq-btn-expanda i {
+    margin-right: 16px;
+    color: var(--pasta-color);
+    font-size: 24px;
+}
+
+#fa-fa-file,#fa-fa-trash,#fa-fa-pencil-square-o {
+    font-size: 14px;
+    border: none;
+}
+
+#marq-btn-open{
+    border: none;
+    background-color: var(--marq-salvar-arquivo);
+    color: var(--editor-foreground-color);
+    padding: 2px;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+#marq-btn-remove{
+    border: none;
+    background-color: var(--marq-previsualizar);
+    color: var(--editor-foreground-color);
+    padding: 2px;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+.marq-action-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.marq-editor-2-partes {
+    display: flex;
+    flex-direction: row;
+}
+
+#webview-youtube {
+    width: 19vw;
+    height: 30vh;
+    border: none;
+}
+
+.marq-area-webview-youtube {
+    display: none;
+    bottom: 12px;
+    position: absolute;
+}
